@@ -9,14 +9,14 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.1'
+        classpath 'com.github.jengelman.gradle.plugins:shadow:5.2.0'
     }
 }
 
 plugins {
     id 'idea'
     id 'java'
-    id 'com.github.johnrengelman.shadow' version '1.2.1'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
 version = '0.1.0'
@@ -40,7 +40,7 @@ repositories {
     mavenCentral()
 }
 
-ext.jmhVersion = '1.7'
+ext.jmhVersion = '1.21'
 
 dependencies {
     compile "org.openjdk.jmh:jmh-core:$jmhVersion"
@@ -65,6 +65,6 @@ jar {
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.2.1'
+wrapper {
+    gradleVersion = '5.5'
 }
