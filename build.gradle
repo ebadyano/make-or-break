@@ -45,6 +45,7 @@ ext.jmhVersion = '1.21'
 dependencies {
     compile "org.openjdk.jmh:jmh-core:$jmhVersion"
     provided "org.openjdk.jmh:jmh-generator-annprocess:$jmhVersion"
+    annotationProcessor "org.openjdk.jmh:jmh-generator-annprocess:$jmhVersion"
 }
 
 idea {
